@@ -1,0 +1,62 @@
+<html>
+    <script src="bb.js"></script>
+    <link rel="stylesheet" type="text/css" href="ss.css">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="picture"><img src="./2.gif"/></div>
+        <div id="question">
+            <p>先来做道题哈</p>
+            <p>在锐角三角形ABC中，sinA=2sinBsinC,则tanAtanBtanC的最小值是</p>
+        </div>
+        <div id="choice">
+            <p><input type="button" name="choice1" id="choice1" value="我想好怎么回答了" onclick="return prom()"></p>
+            <p><input type="button" name="choice2" id="choice2" value="什么玩意儿，不会" onclick="return ale()"></p>
+        </div>
+        <div id="questionA">
+            <p id="aa"></p>
+            <p id="AA2"><input type="button" id="AA21" value="左" onclick="return questionAA21()" style="display:none">
+                <input type="button" id="AA22" value="右" onclick="return questionAA22()" style="display:none"></p>
+            <p ><input type="button" value="开始回答" id="AA3" onclick="return AA3function()" style="display:none;"></p>
+        </div>
+        <div id="questionB">
+            <p id="bb"></p>
+            <p id="BB3">
+                <input type="button" value="开始回答" id="BB3" onclick="return BB3function()" style="display: none">
+            </p>
+            <p id="BB2">
+                <input type="button" id="BB21" value="往前走" onclick="return questionBB2b()" style="display: none;">
+                <input type="button" id="BB22" value="往回走" onclick="return result1()" style="display: none;">
+            </p>
+            <p id="BB2b">
+                <input type="button" id="BB2b1" value="拔下刀带走" onclick="return questionBB2b()" style="display: none;">
+                <input type="button" id="BB2b2" value="戴着面具走" onclick="return questionBB2b()" style="display: none;">
+                <input type="button" id="BB2b3" value="带着冥币走" onclick="return questionBB2b()" style="display: none;">
+                <input type="button" id="BB2b4" value="什么也不带走" onclick="return questionBB2b()" style="display: none;">
+            </p>
+        </div>
+        <div id="questionC">
+            <p id="cc"></p>
+            <p id="CC3">
+                <input type="button" value="开始回答" id="CC3" onclick="return CC3function()" style="display: none">
+            </p>
+            <p id="CC2">
+                <input type="button" value="吹灭蜡烛再走" id="CC31" onclick="return questionCC2()" style="display: none;">
+                <input type="button" value="捡起冥币再走" id="CC32" onclick="return questionCC2()" style="display: none;">
+                <input type="button" value="什么也不带走" id="CC33" onclick="return questionCC2()" style="display: none;">
+            </p>
+        </div>
+        <div id="questionD">
+            <p id="dd"></p>
+            <p id="DD2">
+                <input type="button" value="登上石阶，离开这里" id="DD31" onclick="return result2()" style="display: none;">
+                <input type="button" value="返回村庄" id="DD32" onclick="return result3()" style="display: none;">
+                <input type="button" value="向右转" id="DD33" onclick="return questionDD2()" style="display: none;">
+            </p>
+        </div>
+        <div id="questionE">
+            <p id="ee"></p>
+        </div>
+    </body>
+</html>
