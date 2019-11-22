@@ -14,6 +14,10 @@ $(document).ready(function(){
                     $(day[t][i]).html(date.yaoxue1[t].day[i].name);
                 };
             };
+            if (document.getElementById("week").options[5].selected == true){
+                $(day[2][0]).html(date.yaoxue1[5].addition[0].name);
+                $(day[4][1]).html(date.yaoxue1[5].addition[1].name);
+            };
         });
     });
 });
