@@ -5,4 +5,5 @@
 @keyframes mymove{
     from {height: 2cm; width: 2cm; filter: opacity(100%);}
     to {height: 1.5cm; width: 1.5cm; filter: opacity(0%);}
+    50% {transform: rotate(10deg);}
 }

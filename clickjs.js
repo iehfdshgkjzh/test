@@ -1,4 +1,4 @@
-lst = ["pic1.png", "pic2.png", "pic3.png", "pic4.png", "pic5.png"];
+lst = ["pic/pic1.png", "pic/pic2.png", "pic/pic3.png", "pic/pic4.png", "pic/pic5.png"];
 
 document.onclick = function click(){
     var mun = Math.random();
