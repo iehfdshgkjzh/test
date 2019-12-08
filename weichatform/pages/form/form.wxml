@@ -1,0 +1,88 @@
+<!--form.wxml-->
+<view class="container">
+   <view class="titl">
+      <view class="title">{{title}}</view>
+   </view>
+   <view class="background">
+      <form bindsubmit="formSubmit" bindreset="formReset">
+         <view class="questionnaire">
+            <view class="begin">
+               <text>{{begin_text}}</text>
+            </view>
+            <view class="user_information">
+               <view class="gen">
+                  <text>{{gender}}</text>
+                  <radio-group class="infor-gen" bindchange="radioChange">
+                     <radio class="radio-gen" wx:for-items="{{genitems}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}" color="rgb(118, 50, 225)">
+                        <text>{{item.value}}</text>
+                     </radio>
+                  </radio-group>
+               </view>
+               <view class="age">
+                  <text>{{age}}</text>
+                  <picker mode="date" value="{{date}}" start="1960-01-01" end="2019-12-01" bindchange="dateChange">
+                     <view>{{date}}</view>
+                  </picker>
+               </view>
+               <view class="reg">
+                  <text>{{regi}}</text>
+                  <picker mode="region" value="{{region}}" custom-item="{{customItem}}" bindchange="bindRegionChange">
+                     <view>{{region[0]}}, {{region[1]}}, {{region[2]}}</view>
+                  </picker>
+               </view>
+               <view class="key">
+                  <text>{{key_text}}</text>
+                  <input password="{{pass}}" maxlength="13" class="keyline"></input>
+                  <image class="image" src="{{src}}" bindtap="change_state"></image>
+               </view> 
+            </view>
+            <view class="line"></view>
+            <view class="question">
+               <view class="quesa">
+                  <text>{{quesa_text}}</text>
+                  <radio-group class="quesa_choice" bindchange="quesaChange">
+                     <radio class="quesa_choices" wx:for-items="{{quesa_items}}" value="{{item.name}}" color="rgb(118, 50, 225)">
+                        <text>{{item.value}}</text>
+                     </radio>
+                  </radio-group>
+               </view>
+               <view class="quesb">
+                  <text>{{quesb_text}}</text>
+                  <checkbox-group bindchange="quesbChange">
+                     <label wx:for="{{quesb_items}}">
+                        <checkbox value="{{item.name}}" disabled="{{item.isdisabled}}" color="rgb(118, 50, 225)">{{item.value}}</checkbox>
+                     </label>
+                  </checkbox-group>
+               </view>
+               <view class="quesc">
+                  <text>{{quesc_text}}</text>
+                  <input placeholder="请输入" value="{{quesc_must}}" bindinput="quescInput" class="inputc"></input>
+               </view>
+               <view class="quesd">
+                  <text>{{quesd_text}}</text>
+                  <radio-group class="quesd_chioce" bindchange="quesdChange">
+                     <radio class="quesd_choices" wx:for-items="{{quesd_items}}" value="{{item.name}}" bindtap="quesdTap" checked="{{item.checked}}" color="rgb(118, 50, 225)">
+                        <text>{{item.value}}</text>
+                     </radio>
+                  </radio-group>
+               </view>
+               <view class="quese">
+                  <text>{{quese_text}}</text>
+                  <textarea placeholder="请输入" auto-height="true" maxlength="800" class="inpute" bindinput="inputLength"></textarea>
+                  <view class="underinput">
+                     <text class="input_num">{{inputlong}}/800</text>
+                  </view>
+               </view>
+            </view>
+            <view class="pageend">
+               <view class="clear" >
+                  <button class="clear_button" formType="reset">重置</button>
+               </view>
+               <view class="finish" form-type="submit">
+                  <button class="finish_button" formType="submit">提交</button>
+               </view>
+            </view>
+         </view>
+      </form>
+   </view>
+</view>

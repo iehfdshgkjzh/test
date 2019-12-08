@@ -1,0 +1,140 @@
+.titl {
+   position: absolute;
+   width: 100%;
+   height: 120rpx;
+   background-color: rgb(208, 238, 249);
+   border-radius: 50rpx 50rpx 0rpx 0rpx;
+   top: 0
+}
+
+.title {
+   font-size: 50rpx;
+   color: rgb(20, 111, 246);
+   text-align: center;
+   padding-top: 24rpx;
+}
+
+.background {
+   width: 100%;
+   background-color: rgb(243, 250, 255);
+   position: absolute;
+   top: 120rpx
+}
+
+.begin {
+   padding-top: 17rpx
+}
+
+.questionnaire {
+   width: 100%;
+}
+
+.user_information {
+   padding-left: 20rpx;
+}
+
+.question {
+   padding-left: 20rpx;
+}
+
+.gen {
+   padding-top: 60rpx;
+   height: 126rpx
+}
+
+.age {
+   height: 126rpx
+}
+
+.reg {
+   height: 126rpx
+}
+
+.key {
+   height: 126rpx;
+}
+
+.box {
+   height: 60rpx;
+
+}
+
+.keyline {
+   background-color: white;
+   width: 622rpx;
+   height: 60rpx;
+}
+
+.image {
+   height: 60rpx;
+   width: 90rpx;
+   position: absolute;
+   right: 20rpx;
+   top: 537.5rpx
+}
+
+.line {
+   height: 3rpx;
+   background-color: rgb(202, 209, 249)
+}
+
+.quesa {
+   padding-top: 40rpx;
+   height: 126rpx
+}
+
+.quesb {
+   height: 126rpx
+}
+
+.quesc {
+   height: 126rpx
+}
+
+.inputc {
+   background-color: white;
+   width: 710rpx;
+   height: 60rpx;
+}
+
+.quesd {
+   height: 126rpx
+}
+
+.inpute {
+   background-color: white;
+   width: 710rpx;
+}
+
+.underinput {
+   background-color: white;
+   width: 710rpx;
+   text-align: right;
+   font-size: 23rpx;
+   color: gray
+}
+
+.pageend {
+   width: 100%;
+   height: 350rpx
+}
+
+.clear {
+   padding-top: 80rpx;
+}
+
+.clear_button {
+   background-color: rgb(224, 214, 255);
+   color: rgb(91, 69, 216);
+   width: 400rpx
+}
+
+.finish {
+   padding-top: 20rpx;
+}
+
+.finish_button {
+   background-color: rgb(224, 214, 255);
+   color: rgb(91, 69, 216);
+   width: 400rpx
+}
