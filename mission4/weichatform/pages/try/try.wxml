@@ -1,0 +1,8 @@
+<!--pages/try/try.wxml-->
+<text>pages/try/try.wxml</text>
+<view>
+   <text>{{id}}</text>
+</view>
+<view wx:for="{{list_data}}" wx:key="tryy">
+   <text>{{item.name}}</text>
+</view>
