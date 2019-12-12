@@ -1,6 +1,0 @@
-<!--finish.wxml-->
-<view class="container">
-   <view>
-      <text class="thank_text">{{thank}}</text>
-   </view>
-</view>

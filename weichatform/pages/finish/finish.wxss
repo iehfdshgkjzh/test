@@ -1,5 +1,0 @@
-/* pages/finish/finish.wxss */
-.thank_text {
-   width: 100%;
-   font-size: 60rpx
-}
