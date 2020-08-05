@@ -1,11 +1,21 @@
 // 云函数入口文件
 const cloud = require("wx-server-sdk");
+/**
+ * initialize cloud
+ * @method initialize
+ */
 cloud.init({
   // env: "cloud-miniapp-96177b",
   env: "release-824dd3",
   traceUser: true
 });
 
+/**
+ * 
+ * @param {*} check 
+ * @param {*} examFlag 
+ * @function regObj
+ */
 function regObj(check, examFlag) {
   let o = {
     openid: cloud.getWXContext().OPENID

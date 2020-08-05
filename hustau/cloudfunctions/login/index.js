@@ -5,6 +5,7 @@
 const cloud = require("wx-server-sdk");
 /**
  * initialize cloud
+ * @function initialize
  */
 cloud.init({
   // env: "cloud-miniapp-96177b",
@@ -60,7 +61,7 @@ exports.main = async(event, context) => {
   }
   /**
    * 报错
-   * @returns error(true, message)
+   * @returns {json} error(true, message)
    */
   ).catch(err => {
     return {
