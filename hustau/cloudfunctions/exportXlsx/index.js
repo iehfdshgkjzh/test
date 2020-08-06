@@ -25,7 +25,7 @@ exports.main = async(event, context) => {
   /**
    * check date available
    * @function if data available
-   * @returns {json} error(true, message)
+   * @returns {object} error(true, message)
    */ 
   if (!event.startDate || !event.endDate || event.startDate > event.endDate) {
     return {
@@ -69,7 +69,7 @@ exports.main = async(event, context) => {
   /**
    * get cell data
    * db.command.gte 查询筛选，大于等于
-   * @method 获取'forms'集合
+   * @method get array'forms'
    */
   var cellData = await db.collection("forms").where({
     exam: 3,
@@ -118,8 +118,8 @@ exports.main = async(event, context) => {
   // end create workbook
 
   /**
-   * write to Buffer
-   * @method 加入缓存
+   * 加入缓存
+   * @method write to Buffer
    */
   var buf = XLSX.write(workbook, {
     type: "buffer",
@@ -127,7 +127,8 @@ exports.main = async(event, context) => {
   });
   //console.log(buf);
   /**
-   * @method 将本地资源上传至云储存空间
+   * 将本地资源上传至云储存空间
+   * @method upload
    */
   return await cloud.uploadFile({
     cloudPath: nameStr + ".xlsx",

@@ -55,13 +55,13 @@ exports.main = async(event, context) => {
       }
     }
     /**
-     * @returns {json} ret(用户信息)
+     * @returns {object} ret(用户信息)
      */
     return ret;
   }
   /**
    * 报错
-   * @returns {json} error(true, message)
+   * @returns {object} error(true, message)
    */
   ).catch(err => {
     return {
