@@ -49,7 +49,7 @@ exports.main = async(event, context) => {
   /**
    * 检查event.check
    * object.keys 处理对象：返回属性数组；处理数组、字符串：返回索引数组
-   * @param {object} event.check
+   * @param {object} event.check - 'approver','exam','openid','time'
    * @method object.keys
    * @function isObject
    * @returns {object} error
@@ -63,7 +63,7 @@ exports.main = async(event, context) => {
 
   /**
    * 判断event.exam是否为符合条件的数字
-   * @param {number} flag
+   * @param {number} flag - 将event.exam转化为数字（整数、小数）或NaN
    * @function isNumber
    */
   const flag = Number(event.exam);
