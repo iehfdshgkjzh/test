@@ -44,5 +44,68 @@ App({
       }
     }
     return str;
+  },
+
+    /**
+   * _toEndDateStr()
+   * 将Date对象转为14天后的"Y-m-d"字符串.
+   * 注意：getMonth()从 Date 对象返回月份 (0 ~ 11)
+   * @param {Date} date 需要转换的日期对象
+   * @return {String} "Y-m-d"格式字符串
+   */
+  _toEndDateStr: function(date) {
+    const z = function(n, l) {
+      n = n.toString();
+      while (n.length < l) n = "0" + n;
+      return n;
+    }
+    let str = "";
+    if (date instanceof Date) {
+      let year = date.getFullYear();
+      let month = date.getMonth();
+      let day = date.getDate();
+      
+      if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+        if (day <= 18) {
+          str += z(year, 4) + "-" + z(month, 2) + "-" + z(day+13, 2)
+        }
+        else {
+          str += z(day-18, 2)
+          if (month == 12) {
+            str = z(year+1, 4) + "-01-" + str
+          }
+          else {
+            str = z(year, 4) + "-" + z(month+1, 2) + "-" + str
+          }   
+        }
+      if (month == 4 || month == 6 || month == 9 || month == 11) {
+        if (day <= 17) {
+          str += z(year, 4) + "-" + z(month, 2) + "-" + z(day+13, 2)
+        }
+        else {
+          str += z(year, 4) + "-" + z(month+1, 2) + "-" + z(day-17, 2)
+        }
+      }
+      if (month == 2) {
+        if ((year % 100 == 0 && year % 400 == 0) || (year % 100 != 0 && year % 4 == 0)) {
+          if (day <= 16) {
+            str += z(year, 4) + "-" + z(month, 2) + "-" + z(day+13, 2)
+          }
+          else {
+            str += z(year, 4) + "-" + z(month+1, 2) + "-" + z(day-16, 2)
+          }
+        }
+        else {
+          if (day <= 15) {
+            str += z(year, 4) + "-" + z(month, 2) + "-" + z(day+13, 2)
+          }
+          else {
+            str += z(year, 4) + "-" + z(month+1, 2) + "-" + z(day-15, 2)
+          }
+        }
+      }
+    }
+    return str;
+    }
   }
 })
